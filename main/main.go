@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 	"fmt"
-	"leego/wx"
+	"goapi/wx"
 )
 
 func handler(w http.ResponseWriter, r *http.Request)  {

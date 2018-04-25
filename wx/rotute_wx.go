@@ -2,7 +2,7 @@ package wx
 
 import (
 	"net/http"
-	"leego/utils"
+	"goapi/utils"
 	"fmt"
 	"encoding/json"
 )
