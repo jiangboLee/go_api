@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传图片</title>
+    <script>
+        window.onload = function () {
+            var input = document.getElementById("image_imput");
+            var result, div;
+            if (typeof FileReader === 'undefined') {
+                result.innerHTML = "抱歉，您的浏览器不支持FileReader";
+                input.setAttribute('disabled', 'disabled');
+            }
+        }
+    </script>
+</head>
+<body>
+    <form method="post" >
+        <div>选择图片:</div>
+        <input id="image_imput" type="file" name="pic" multiple>
+        <br>
+        <input type="button" value="上传">
+    </form>
+</body>
+</html>

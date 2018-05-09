@@ -6,10 +6,10 @@ import (
 	"bytes"
 )
 
-const (
-	GetAccess_token = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&"
-	SendTemplate = "https://api.weixin.qq.com/cgi-bin/message/wxopen/template/send?access_token="
-)
+//const (
+//	GetAccess_token = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&"
+//	SendTemplate = "https://api.weixin.qq.com/cgi-bin/message/wxopen/template/send?access_token="
+//)
 
 func HttpGet(url string) string {
 	resp, err := http.Get(url)

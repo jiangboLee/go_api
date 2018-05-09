@@ -15,5 +15,6 @@ func main() {
 
 	http.HandleFunc("/",handler)
 	http.HandleFunc("/wx/api/appid",wx.GetAppid)
+	http.HandleFunc("/img/save",);
 	http.ListenAndServeTLS(":443","1_www.ljbniubi.top_bundle.crt","2_www.ljbniubi.top.key", nil)
 }
