@@ -2,7 +2,7 @@ package wx
 
 import (
 	"net/http"
-	"goapi/utils"
+	"go_api/main/utils"
 	"fmt"
 	"encoding/json"
 )

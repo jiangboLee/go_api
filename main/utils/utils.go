@@ -9,6 +9,8 @@ import (
 var (
 	logger *log.Logger
 )
+//系统地址   /Users/lijiangbo
+const SYSTEM_PATH string = "/home/ubuntu"
 
 //快速打印构造函数
 func P(a ...interface{})  {
