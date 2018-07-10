@@ -16,6 +16,7 @@ func main() {
 
 	http.HandleFunc("/", handler)
 	http.HandleFunc("/wx/api/appid", wx.GetAppid)
+	http.HandleFunc("/wx/api/history",wx.GetHistory)
 	/*图片上传*/
 	http.HandleFunc("/img/upload", every.SaveImage)
 	http.HandleFunc("/img/uploading", every.UploadImage)

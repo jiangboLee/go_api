@@ -96,3 +96,19 @@ func wxgetAppid(code string) string {
 	return utils.HttpGet("https://api.weixin.qq.com/sns/jscode2session?appid=" + appId + "&secret=" + appSecret + "&js_code=" + code+ "&grant_type=authorization_code")
 }
 
+func GetHistory(w http.ResponseWriter, r *http.Request)  {
+	w.Header().Set("Content-Type", "application/json")
+	key :=  r.FormValue("key")
+	v := r.FormValue("v")
+	month := r.FormValue("month")
+	day := r.FormValue("day")
+	if len(key) > 0 || len(v) > 0 || len(month) > 0 || len(day) > 0 {
+		fmt.Fprintf(w, getHistoryData(key, v, month, day))
+	} else {
+		fmt.Fprintf(w, "参数不完整")
+	}
+}
+func getHistoryData(key, v, month, day string) string {
+	return utils.HttpGet("http://api.juheapi.com/japi/toh?key=" + key + "&v=" + v + "&month=" + month + "&day=" + day)
+}
+
